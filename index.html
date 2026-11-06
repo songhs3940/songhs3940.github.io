@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>공장서구부동산 | 인천 서구 공장·창고 전문 중개</title>
+<meta name="description" content="인천 서구 공장·창고·산업용지 전문 공인중개사. 공장등록·용도변경·개발행위허가 등 인허가 사전 검토부터 계약까지 함께합니다.">
+<meta property="og:title" content="공장서구부동산 | 인천 서구 공장·창고 전문 중개">
+<meta property="og:description" content="인허가 사전 검토부터 계약까지, 공장 거래를 끝까지 책임집니다.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root {
+    --navy: #14233c;
+    --navy-2: #1d3253;
+    --accent: #e8792b;
+    --accent-dark: #c9611a;
+    --ink: #1c2430;
+    --muted: #5b6676;
+    --line: #e3e7ec;
+    --bg: #ffffff;
+    --bg-soft: #f4f6f9;
+    --tmp: #fff3b0;
+    --radius: 14px;
+    --max: 1120px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Pretendard", -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.65;
+    word-break: keep-all;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+  /* 임시 표시: 실제 정보로 바꿔야 하는 곳 */
+  .tmp { background: var(--tmp); border-radius: 4px; padding: 0 4px; color: #6b5200; }
+  .draft-banner {
+    background: #fff8d6; color: #6b5200; text-align: center;
+    font-size: 14px; padding: 8px 16px; border-bottom: 1px solid #f0e2a0;
+  }
+
+  /* 헤더 */
+  header {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(255,255,255,.96); backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; color: var(--navy); }
+  .brand-mark {
+    width: 34px; height: 34px; border-radius: 8px; background: var(--navy);
+    display: grid; place-items: center;
+  }
+  .nav-links { display: flex; gap: 28px; font-size: 15px; color: var(--muted); }
+  .nav-links a:hover { color: var(--navy); }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    font-weight: 700; border-radius: 10px; padding: 12px 20px; font-size: 16px;
+    border: 0; cursor: pointer; transition: background .15s, transform .15s;
+  }
+  .btn:active { transform: scale(.98); }
+  .btn-accent { background: var(--accent); color: #fff; }
+  .btn-accent:hover { background: var(--accent-dark); }
+  .btn-ghost { background: rgba(255,255,255,.1); color: #fff; border: 1px solid rgba(255,255,255,.35); }
+  .btn-ghost:hover { background: rgba(255,255,255,.18); }
+  .btn-kakao { background: #fee500; color: #191919; }
+  .nav .btn { padding: 9px 16px; font-size: 15px; }
+
+  /* 히어로 */
+  .hero {
+    background:
+      linear-gradient(120deg, rgba(20,35,60,.97) 0%, rgba(29,50,83,.92) 60%, rgba(29,50,83,.85) 100%),
+      repeating-linear-gradient(90deg, transparent 0 60px, rgba(255,255,255,.03) 60px 61px);
+    color: #fff; padding: 88px 0 96px;
+  }
+  .eyebrow {
+    display: inline-block; font-size: 14px; font-weight: 700; letter-spacing: .02em;
+    color: #ffd2b0; background: rgba(232,121,43,.18); padding: 6px 12px; border-radius: 999px;
+    margin-bottom: 20px;
+  }
+  .hero h1 { font-size: clamp(30px, 5vw, 50px); line-height: 1.25; margin: 0 0 20px; font-weight: 800; letter-spacing: -.02em; }
+  .hero h1 em { font-style: normal; color: #ffb27a; }
+  .hero p.lead { font-size: clamp(16px, 2vw, 19px); color: #cfd8e6; max-width: 620px; margin: 0 0 36px; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  .hero-cta .btn { padding: 15px 24px; font-size: 17px; }
+
+  .stats {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: rgba(255,255,255,.14); border-radius: var(--radius); overflow: hidden;
+    margin-top: 56px; max-width: 760px;
+  }
+  .stat { background: rgba(20,35,60,.6); padding: 20px 22px; }
+  .stat b { display: block; font-size: 26px; font-weight: 800; color: #fff; }
+  .stat span { font-size: 14px; color: #b7c3d6; }
+
+  /* 섹션 공통 */
+  section { padding: 88px 0; }
+  .soft { background: var(--bg-soft); }
+  .sec-head { max-width: 680px; margin-bottom: 44px; }
+  .sec-head small { color: var(--accent); font-weight: 800; font-size: 14px; letter-spacing: .04em; }
+  .sec-head h2 { font-size: clamp(25px, 3.4vw, 34px); line-height: 1.35; margin: 8px 0 12px; color: var(--navy); letter-spacing: -.02em; }
+  .sec-head p { color: var(--muted); margin: 0; font-size: 17px; }
+
+  /* 서비스 카드 */
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .card {
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 28px 26px;
+  }
+  .card .ic {
+    width: 46px; height: 46px; border-radius: 12px; background: #fdeee3;
+    display: grid; place-items: center; margin-bottom: 18px;
+  }
+  .card h3 { margin: 0 0 8px; font-size: 19px; color: var(--navy); }
+  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+  .card ul { margin: 12px 0 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
+
+  /* 체크리스트 */
+  .check-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+  .checklist li {
+    display: flex; gap: 14px; background: #fff; border: 1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px;
+  }
+  .checklist .no {
+    flex: 0 0 30px; height: 30px; border-radius: 50%; background: var(--navy); color: #fff;
+    display: grid; place-items: center; font-weight: 800; font-size: 14px;
+  }
+  .checklist b { display: block; color: var(--navy); }
+  .checklist span { color: var(--muted); font-size: 15px; }
+  .note {
+    background: var(--navy); color: #dbe3ef; border-radius: var(--radius); padding: 32px 30px;
+  }
+  .note h3 { color: #fff; margin: 0 0 12px; font-size: 21px; }
+  .note p { margin: 0 0 14px; font-size: 15.5px; }
+  .note .small { font-size: 13.5px; color: #9fb0c8; margin: 0; }
+
+  /* 절차 */
+  .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; counter-reset: s; }
+  .step { position: relative; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 20px; }
+  .step::before {
+    counter-increment: s; content: "STEP " counter(s);
+    font-size: 12.5px; font-weight: 800; color: var(--accent); letter-spacing: .05em;
+  }
+  .step h3 { margin: 8px 0 6px; font-size: 17px; color: var(--navy); }
+  .step p { margin: 0; color: var(--muted); font-size: 14.5px; }
+
+  /* 지역 */
+  .areas { display: flex; flex-wrap: wrap; gap: 10px; }
+  .area {
+    background: #fff; border: 1px solid var(--line); border-radius: 999px;
+    padding: 10px 18px; font-weight: 600; color: var(--navy); font-size: 15.5px;
+  }
+
+  /* 소개 */
+  .about { display: grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: center; }
+  .photo {
+    aspect-ratio: 4/5; border-radius: var(--radius); background: #dfe4ec;
+    display: grid; place-items: center; color: #7a8698; font-size: 15px; text-align: center;
+    border: 2px dashed #c4ccd8;
+  }
+  .about h2 { margin-top: 0; }
+  .about blockquote {
+    margin: 0 0 20px; padding-left: 18px; border-left: 4px solid var(--accent);
+    font-size: 19px; color: var(--navy); font-weight: 600;
+  }
+  .about p { color: var(--muted); }
+
+  /* 하단 CTA */
+  .cta-band { background: var(--navy); color: #fff; text-align: center; padding: 72px 0; }
+  .cta-band h2 { font-size: clamp(24px, 3.4vw, 34px); margin: 0 0 12px; letter-spacing: -.02em; }
+  .cta-band p { color: #c3cfe0; margin: 0 0 30px; }
+  .cta-band .hero-cta { justify-content: center; }
+  .cta-band .tel { display: block; font-size: clamp(28px, 5vw, 40px); font-weight: 800; margin-bottom: 26px; color: #ffb27a; }
+
+  /* 푸터 (공인중개사법 제18조의2 표시사항) */
+  footer { background: #0d1829; color: #95a3b8; font-size: 14px; padding: 40px 0 120px; }
+  footer .info { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 32px; margin: 14px 0 22px; }
+  footer .info b { color: #c9d3e1; font-weight: 600; margin-right: 8px; }
+  footer .brand { color: #fff; }
+  footer .copy { border-top: 1px solid #22314a; padding-top: 18px; font-size: 13px; }
+
+  /* 모바일 하단 고정 바 */
+  .mobile-bar {
+    display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+    background: #fff; border-top: 1px solid var(--line);
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    gap: 8px; grid-template-columns: 1.4fr 1fr 1fr;
+  }
+  .mobile-bar .btn { padding: 13px 8px; font-size: 15.5px; }
+  .btn-line { background: #fff; color: var(--navy); border: 1px solid var(--line); }
+
+  @media (max-width: 960px) {
+    .grid-3 { grid-template-columns: 1fr 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    .check-wrap, .about { grid-template-columns: 1fr; }
+    .about .photo { max-width: 260px; }
+  }
+  @media (max-width: 640px) {
+    .wrap { padding: 0 16px; }
+    .nav-links, .nav .btn { display: none; }
+    .hero { padding: 60px 0 68px; }
+    .hero-cta .btn { flex: 1 1 100%; }
+    .stats { grid-template-columns: 1fr; }
+    .stat { display: flex; align-items: baseline; justify-content: space-between; padding: 14px 18px; }
+    .stat b { font-size: 21px; }
+    section { padding: 64px 0; }
+    .grid-3, .steps { grid-template-columns: 1fr; }
+    footer .info { grid-template-columns: 1fr; }
+    .mobile-bar { display: grid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="draft-banner">시안입니다. <span class="tmp">노란색으로 표시된 부분</span>은 임시 정보이며 실제 정보로 바꿀 예정입니다.</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M2 21V10l6 4V10l6 4V6l8 4v11z"/><path d="M2 21h20"/></svg>
+      </span>
+      공장서구부동산
+    </a>
+    <nav class="nav-links">
+      <a href="#service">업무 분야</a>
+      <a href="#check">계약 전 체크</a>
+      <a href="#process">진행 절차</a>
+      <a href="#about">대표 소개</a>
+    </nav>
+    <a class="btn btn-accent" href="tel:0320000000">📞 전화 상담</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">인천 서구 공장 · 창고 · 산업용지 전문</span>
+    <h1>공장 거래는<br><em>인허가 검토</em>부터 시작합니다</h1>
+    <p class="lead">공장등록 가능 여부, 용도지역, 위반건축물, 전력 용량까지 계약 전에 먼저 확인합니다. 24년 경력의 공인중개사가 매매·임대의 처음부터 잔금까지 함께합니다.</p>
+    <div class="hero-cta">
+      <a class="btn btn-accent" href="tel:0320000000">📞 전화 상담 <span class="tmp" style="background:rgba(255,243,176,.9)">032-000-0000</span></a>
+      <a class="btn btn-kakao" href="#" title="카카오톡 채널 주소로 교체 예정">💬 카카오톡 상담</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>2002년</b><span>공인중개사 자격 취득</span></div>
+      <div class="stat"><b>24년</b><span>부동산 중개 경력</span></div>
+      <div class="stat"><b>공장 전문</b><span>매매 · 임대 · 부지</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="service">
+  <div class="wrap">
+    <div class="sec-head">
+      <small>SERVICE</small>
+      <h2>공장 거래에 필요한 검토를<br>한 곳에서 진행합니다</h2>
+      <p>단순히 매물을 소개하는 데서 그치지 않고, 그 공장에서 원하는 업종을 실제로 운영할 수 있는지 함께 확인합니다.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8792b" stroke-width="2" stroke-linejoin="round"><path d="M2 21V10l6 4V10l6 4V6l8 4v11z"/></svg></div>
+        <h3>공장 매매 · 임대</h3>
+        <p>제조공장, 근린생활시설 공장, 지식산업센터까지 업종과 규모에 맞는 물건을 찾습니다.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8792b" stroke-width="2" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M7 21v-8h10v8M7 17h10"/></svg></div>
+        <h3>창고 · 물류시설</h3>
+        <p>층고, 하역 동선, 진입도로 폭, 대형차 회차 여건을 현장에서 직접 확인합니다.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8792b" stroke-width="2"><path d="M3 20h18M5 20V9l7-4 7 4v11"/><path d="M9 20v-5h6v5"/></svg></div>
+        <h3>산업용지 · 공장부지</h3>
+        <p>용도지역과 개발행위허가 가능성, 기반시설 여건을 살펴 신축이 가능한 부지를 검토합니다.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8792b" stroke-width="2" stroke-linecap="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div>
+        <h3>인허가 사전 검토</h3>
+        <ul>
+          <li>공장설립·공장등록 가능 여부</li>
+          <li>용도변경, 개발행위허가 쟁점</li>
+          <li>건축물대장 위반 여부 확인</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8792b" stroke-width="2" stroke-linecap="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg></div>
+        <h3>세무 쟁점 사전 안내</h3>
+        <p>취득세 중과 지역 여부, 양도 시 유의점 등 거래 전에 짚어야 할 쟁점을 정리해 드리고, 구체적인 세무 판단은 제휴 세무사와 연계합니다.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8792b" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M5 7h14M7 7l-3 7a3 3 0 0 0 6 0zM17 7l-3 7a3 3 0 0 0 6 0z"/></svg></div>
+        <h3>계약 · 권리관계 점검</h3>
+        <p>등기부, 토지이용계획, 건축물대장을 대조해 권리관계를 확인하고, 필요하면 법무사·변호사와 연계합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="check" class="soft">
+  <div class="wrap check-wrap">
+    <div>
+      <div class="sec-head" style="margin-bottom:28px">
+        <small>CHECK POINT</small>
+        <h2>공장 계약 전에<br>꼭 확인해야 할 5가지</h2>
+        <p>가격만 보고 계약했다가 공장등록이 안 되거나 전력이 부족해 낭패를 보는 경우가 적지 않습니다.</p>
+      </div>
+      <ul class="checklist">
+        <li><span class="no">1</span><div><b>용도지역과 업종 제한</b><span>원하는 업종이 그 땅에서 허용되는지</span></div></li>
+        <li><span class="no">2</span><div><b>공장등록 가능 여부</b><span>건축물 용도와 면적 요건을 갖췄는지</span></div></li>
+        <li><span class="no">3</span><div><b>위반건축물 여부</b><span>무단 증축이나 용도 위반으로 대장에 표기돼 있지 않은지</span></div></li>
+        <li><span class="no">4</span><div><b>전력 · 설비</b><span>수전 용량, 호이스트, 층고, 바닥 하중</span></div></li>
+        <li><span class="no">5</span><div><b>진입도로 · 물류 동선</b><span>도로 폭과 대형차 진출입 가능 여부</span></div></li>
+      </ul>
+    </div>
+    <div class="note">
+      <h3>계약 전에 먼저 검토해 드립니다</h3>
+      <p>관심 있는 공장이나 부지의 주소만 알려 주세요. 토지이용계획, 건축물대장, 등기부를 확인해 위 5가지 항목의 주요 쟁점을 정리해 드립니다.</p>
+      <p>이미 다른 곳에서 소개받은 물건도 괜찮습니다.</p>
+      <a class="btn btn-accent" href="tel:0320000000" style="margin-top:6px">📞 주소 알려주고 상담하기</a>
+      <p class="small" style="margin-top:16px">※ 인허가의 최종 판단은 관할 지자체가 하며, 세무·법률 판단은 세무사·변호사 등 해당 전문가의 검토가 필요합니다.</p>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <small>PROCESS</small>
+      <h2>진행 절차</h2>
+      <p>첫 상담부터 잔금까지 한 사람이 끝까지 책임지고 진행합니다.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>상담</h3><p>업종, 필요 면적, 예산, 희망 지역을 듣습니다.</p></div>
+      <div class="step"><h3>조건 정리</h3><p>전력, 층고, 도로 등 필수 조건을 함께 정리합니다.</p></div>
+      <div class="step"><h3>물건 · 인허가 검토</h3><p>후보 물건의 공부서류와 인허가 쟁점을 확인합니다.</p></div>
+      <div class="step"><h3>현장 답사</h3><p>설비와 동선을 현장에서 직접 함께 확인합니다.</p></div>
+      <div class="step"><h3>계약 · 잔금</h3><p>특약 정리부터 잔금, 인도까지 마무리합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <small>AREA</small>
+      <h2>주력 지역</h2>
+      <p>직접 발로 뛰며 시세와 물건 상황을 파악하고 있는 지역입니다. <span class="tmp">지역 목록은 확인 후 수정 예정</span></p>
+    </div>
+    <div class="areas">
+      <span class="area">인천서부산업단지</span>
+      <span class="area">검단일반산업단지</span>
+      <span class="area">가좌 · 석남 공장지대</span>
+      <span class="area">오류 · 왕길 일대</span>
+      <span class="area">청라 · 경서 인근</span>
+      <span class="area">김포 · 부천 인접 지역</span>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="photo">대표 프로필 사진<br>(추후 교체)</div>
+    <div>
+      <div class="sec-head" style="margin-bottom:18px"><small>ABOUT</small><h2>대표 공인중개사 소개</h2></div>
+      <blockquote>“좋은 공장은 가격보다 먼저, 그 자리에서 사업이 되는지를 봐야 합니다.”</blockquote>
+      <p>2002년 공인중개사 자격을 취득한 뒤 20년 넘게 현장에서 중개해 왔고, 현재는 공장·창고·산업용지를 전문으로 하고 있습니다. 공장 거래는 인허가, 건축, 세무, 법무가 얽혀 있어 확인할 것이 많습니다. 관련 법령과 공부서류를 직접 확인하고, 필요한 부분은 전문가와 연계해 고객이 안심하고 결정할 수 있도록 돕습니다.</p>
+      <p><b style="color:var(--navy)">대표 공인중개사 <span class="tmp">홍길동</span></b></p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>공장 · 창고 찾고 계신가요?</h2>
+    <p>조건만 말씀해 주시면 맞는 물건과 검토 의견을 함께 드립니다.</p>
+    <a class="tel" href="tel:0320000000"><span class="tmp" style="color:#6b5200">032-000-0000</span></a>
+    <div class="hero-cta">
+      <a class="btn btn-accent" href="tel:0320000000">📞 전화 상담</a>
+      <a class="btn btn-kakao" href="#">💬 카카오톡 상담</a>
+      <a class="btn btn-ghost" href="#" title="네이버 블로그 주소로 교체 예정">블로그에서 매물 보기</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="brand">공장서구부동산 공인중개사사무소</span>
+    <div class="info">
+      <div><b>대표</b><span class="tmp">홍길동</span></div>
+      <div><b>중개사무소 등록번호</b><span class="tmp">제00000-0000-00000호</span></div>
+      <div><b>소재지</b><span class="tmp">인천광역시 서구 ○○로 00, 1층</span></div>
+      <div><b>전화</b><span class="tmp">032-000-0000 / 010-0000-0000</span></div>
+    </div>
+    <p class="copy">© 공장서구부동산. 이 페이지는 중개사무소 안내용이며 개별 매물의 표시·광고가 아닙니다.</p>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="btn btn-accent" href="tel:0320000000">📞 전화 상담</a>
+  <a class="btn btn-line" href="sms:01000000000">✉️ 문자</a>
+  <a class="btn btn-kakao" href="#">💬 카톡</a>
+</div>
+
+</body>
+</html>
