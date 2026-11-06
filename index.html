@@ -171,6 +171,15 @@
   }
   .about p { color: var(--muted); }
 
+  /* 채널 */
+  .channels { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .ch { display: flex; gap: 16px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; transition: border-color .15s, transform .15s; }
+  .ch:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .ch-ic { flex: 0 0 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; }
+  .ch b { display: block; color: var(--navy); font-size: 17px; }
+  .ch em { display: block; font-style: normal; color: var(--muted); font-size: 14.5px; }
+  .ch small { display: block; color: var(--accent); font-size: 13.5px; font-weight: 600; margin-top: 2px; }
+
   /* 사무소 */
   .office { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
   .office img { border-radius: var(--radius); width: 100%; height: auto; }
@@ -382,7 +391,23 @@
   </div>
 </section>
 
-<section id="office" class="soft">
+<section id="channels" class="soft">
+  <div class="wrap">
+    <div class="sec-head"><small>CHANNEL</small><h2>채널에서 더 만나보세요</h2><p>현장 영상과 상담 채널을 운영하고 있습니다.</p></div>
+    <div class="channels">
+      <a class="ch" href="https://www.youtube.com/@%EA%B3%B5%EC%9E%A5%EC%84%9C%EA%B5%AC%EB%B6%80%EB%8F%99%EC%82%B0" target="_blank" rel="noopener">
+        <span class="ch-ic" style="background:#ff0000"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M9 7.5v9l7.5-4.5z"/></svg></span>
+        <span><b>유튜브</b><em>공장 · 창고 현장 영상과 쇼츠</em><small>@공장서구부동산</small></span>
+      </a>
+      <a class="ch" href="https://pf.kakao.com/_IheUn" target="_blank" rel="noopener">
+        <span class="ch-ic" style="background:#fee500"><svg width="26" height="26" viewBox="0 0 24 24" fill="#191919"><path d="M12 4C7 4 3 7.1 3 11c0 2.5 1.7 4.7 4.2 6l-.9 3.4 3.9-2.6c.6.1 1.2.1 1.8.1 5 0 9-3.1 9-7s-4-7-9-7z"/></svg></span>
+        <span><b>카카오톡 채널</b><em>매물 문의 · 1:1 상담</em><small>공장서구 채널 추가하기</small></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="office">
   <div class="wrap office">
     <img src="img/office.jpg" width="1400" height="1150" alt="공장서구공인중개사사무소 외관 (염곡로 85)" loading="lazy">
     <div>
@@ -423,6 +448,7 @@
       <div><b>전화</b><span>032-582-0064 / 010-7111-0064</span></div>
       <div><b>팩스</b><span>050-4048-0064</span></div>
       <div><b>이메일</b><span>sonsk3940@naver.com</span></div>
+      <div><b>유튜브</b><a href="https://www.youtube.com/@%EA%B3%B5%EC%9E%A5%EC%84%9C%EA%B5%AC%EB%B6%80%EB%8F%99%EC%82%B0" target="_blank" rel="noopener" style="text-decoration:underline">youtube.com/@공장서구부동산</a></div>
       <div><b>카카오톡 채널</b><a href="https://pf.kakao.com/_IheUn" target="_blank" rel="noopener" style="text-decoration:underline">pf.kakao.com/_IheUn</a></div>
     </div>
     <p class="copy">© 공장서구공인중개사사무소. 이 페이지는 중개사무소 안내용이며 개별 매물의 표시·광고가 아닙니다.</p>
